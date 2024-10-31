@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwali Purchase Prediction</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Diwali Purchase Prediction</h1>
+    <label for="customer_id">Enter Customer ID:</label>
+    <input type="text" id="customer_id" name="customer_id" required>
+    <button id="recommend_btn">Get Recommendations</button>
+
+    <div id="recommendations"></div>
+
+    <script>
+        $('#recommend_btn').on('click', function() {
+            const customerId = $('#customer_id').val();
+            $.ajax({
+                url: '/recommend',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ customer_id: customerId }),
+                success: function(response) {
+                    $('#recommendations').html('');
+                    const recommendations = response.recommendations;
+                    if (recommendations.length > 0) {
+                        $('#recommendations').append('<h2>Recommendations:</h2><ul>');
+                        recommendations.forEach(function(item) {
+                            $('#recommendations').append('<li>' + item + '</li>');
+                        });
+                        $('#recommendations').append('</ul>');
+                    } else {
+                        $('#recommendations').append('<p>No recommendations found.</p>');
+                    }
+                },
+                error: function() {
+                    $('#recommendations').html('<p>An error occurred while getting recommendations.</p>');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

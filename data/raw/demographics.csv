@@ -1,0 +1,11 @@
+customer_id,age,gender,city,state,marital_status,income_range
+C001,29,Female,Mumbai,Maharashtra,Single,30k-50k
+C002,45,Male,Bangalore,Karnataka,Married,50k-70k
+C003,34,Female,Delhi,Delhi,Single,20k-30k
+C004,38,Male,Chennai,Tamil Nadu,Married,70k-100k
+C005,27,Female,Hyderabad,Telangana,Single,50k-70k
+C006,32,Male,Pune,Maharashtra,Married,30k-50k
+C007,41,Female,Kolkata,West Bengal,Married,70k-100k
+C008,36,Male,Ahmedabad,Gujarat,Single,20k-30k
+C009,29,Female,Jaipur,Rajasthan,Single,50k-70k
+C010,53,Male,Lucknow,Uttar Pradesh,Married,100k+
