@@ -1,0 +1,36 @@
+Diwali_Purchase_Prediction/
+│
+├── data/
+│   ├── raw/
+│   │   ├── demographics.csv                  # Raw customer demographics dataset
+│   │   ├── purchase_history.csv              # Raw purchase history data
+│   │   └── browsing_history.csv              # Raw browsing history data
+│   ├── processed/
+│   │   ├── cleaned_data.csv                  # Cleaned, merged, and preprocessed data
+│   │   └── features.csv                      # Final features for model training
+│
+├── src/
+│   ├── data_preprocessing.py                 # Script for data preprocessing and feature engineering
+│   ├── model_training.py                     # Model training scripts for various models
+│   ├── recommend.py                          # Final recommendation engine script
+│   ├── utils.py                              # Helper functions used across the project
+│   └── config.py                             # Configuration settings for paths, parameters, etc.
+│
+├── models/
+│   ├── collaborative_filtering.pkl           # Trained collaborative filtering model
+│   ├── logistic_regression.pkl               # Trained logistic regression model
+│   └── scaler.pkl                            # Scaler for data normalization (if required)
+│
+├── notebooks/
+│   ├── EDA.ipynb                             # Exploratory Data Analysis (EDA) notebook
+│   ├── feature_engineering.ipynb             # Feature engineering notebook
+│   └── model_evaluation.ipynb                # Model training and evaluation notebook
+│
+├── app/
+│   ├── app.py                                # Flask app to serve the recommendation engine
+│   └── templates/
+│       └── index.html                        # Frontend UI for the recommendation system
+│       └── recommendations.html              # Display recommendations for users
+│
+├── requirements.txt                          # Python dependencies
+└── README.md                                 # Project documentation
